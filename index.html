@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./tailwind.config.js"></script>
+    <script src="./src/main.js"></script>
+    <title>News Dashboard</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .select {
+            @apply text-skyblue bg-sky-100 rounded-r-3xl;
+          }
+        }
+      </style>
+</head>
+
+<body>
+    <div id="main" class="flex flex-row mr-8 mt-4">
+        <!-- left side -->
+        <div class="basis-1/5">
+            <div id="large" class="hidden lg:flex ml-8 mt-1 flex items-center">
+                <img src="./img/logo.png" alt="logo">
+                <p class="ml-3.5 font-bold text-lg text-primary">Aster News</p>
+            </div>
+            <div id="small" class="lg:hidden ml-3.5 flex items-center">
+                <img id="menu-btn" src="./img/icon/menu-icon.png" class="w-6 mr-4">
+                <img src="./img/logo.png" alt="logo">
+            </div>
+            <ul id="menu" class="hidden lg:block mt-7 font-bold">
+                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer select">
+                    <img src="./img/icon/choose-icon.png" class="h-1.5">
+                    <img src="./img/icon/home.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Top Stories</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/global.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Around the World</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/business.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Business</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/health.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Health</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/shield.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Covid 19</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/video.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Entertainment</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/award.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Sports</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/message.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Discussion</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/bell.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">Notification</p>
+                </li>
+                <li class="flex items-center py-4 pl-3.5 pr-20 ml-1.5 hover:cursor-pointer">
+                    <img src="./img/icon/choose-icon.png" class="hidden h-1.5">
+                    <img src="./img/icon/setting.png" class="w-5 ml-4">
+                    <p class="text-sm ml-8">News Feed Settings</p>
+                </li>
+            </ul>
+        </div>
+        <!-- end left side -->
+        <!-- main side-->
+        <div class="basis-4/5 flex">
+            <div class="basis-1/2 lg:basis-4/5 flex lg:mx-11 max-h-11">
+                <!-- search -->
+                <div id="search" class="w-full lg:w-2/3 flex items-center relative">
+                    <input type="text" placeholder="Search for news.."
+                        class="hidden lg:flex focus:outline-none focus:border-sky-700 focus:ring-sky-500 focus:ring-1 text-sm bg-sky-50 pl-3.5 w-full h-11 rounded">
+                    <div class="absolute right-0 lg:right-4 flex items-center">
+                        <button class="bottom-3"><img src="./img/icon/search-icon.png" class="w-5"></button>
+                    </div>
+                </div>
+                <!-- last new -->
+                <div
+                    class="hidden lg:flex w-1/3 w-full h-11 rounded ml-5 border border-gray-400 flex align-middle relative">
+                    <a href="#" class="text-sm mx-3.5 flex items-center">
+                        <p>Latest news on</p>
+                        <p class="ml-1 text-sky-400">Covid-19</p>
+                        <img src="./img/icon/next-icon.png" class="w-5 absolute right-4">
+                    </a>
+                </div>
+            </div>
+            <!-- right side -->
+            <div class="basis-1/2 lg:basis-1/5 max-h-11">
+                <div class="h-full flex items-center float-right">
+                    <img src="./img/icon/person-icon.png" class="w-6">
+                    <p class="text-sm ml-4 lg:mr-9">My Profile</p>
+                    <img src="./img/icon/down-icon.png" class="hidden lg:block w-4">
+                </div>
+            </div>
+            <!-- end right side -->
+        </div>
+    </div>
+</body>
+
+</html>
