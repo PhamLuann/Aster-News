@@ -20,117 +20,136 @@
             }
 
             .unhidden {
-                @apply pr-7 mt-0;
+                @apply pr-7 mt-0 absolute bg-white;
+            }
+            .layer{
+                @apply bg-menu w-full h-full;
             }
         }
     </style>
 </head>
 
 <body class="bg-mainbg">
-<div id="main" class="flex flex-row mr-8">
-    <!-- left side -->
-    <div id="left-side" class="basis-0 lg:basis-1/5">
-        <div id="small-logo" class="lg:hidden ml-3.5 flex items-center mt-4">
-            <button id="menu_btn"><img src="./img/icon/menu-icon.png" class="w-6 mr-4"></button>
-            <img src="./img/logo.png" alt="logo">
-        </div>
-        <div id="menu" class="hidden lg:block mt-4">
-            <div id="large" class="ml-8 flex items-center">
-                <img src="./img/logo.png" alt="logo">
-                <p class="ml-3.5 font-bold text-lg text-primary">Aster News</p>
-            </div>
-            <ul class=" lg:block mt-7 font-normal">
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer select-menu">
-                    <img src="./img/icon/home.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Top Stories</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/global.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Around the World</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/business.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Business</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/health.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Health</p>
-                </li>
-                <hr class="mr-4">
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/shield.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Covid 19</p>
-                </li>
-                <hr class="mr-4">
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/video.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Entertainment</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/award.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Sports</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/message.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Discussion</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/bell.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">Notification</p>
-                </li>
-                <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
-                    <img src="./img/icon/setting.png" class="w-5 ml-6">
-                    <p class="text-sm ml-8">News Feed Settings</p>
-                </li>
-            </ul>
-            <div class="w-56 h-28 rounded bg-skyblue mt-8 lg:mt-32 ml-6 lg:ml-5 text-white">
-                <div class="flex items-center mx-5">
-                    <img src="./img/icon/gift.png" class="w-6 mt-5">
-                    <p class="mt-5 ml-4 text-sm">Subscribe to Premium</p>
+    <div class="lg:grid lg:grid-cols-5 lg:gap-11 relative">
+        <!-- left side menu -->
+        <div id="layer" class="lg:col-span-1 absolute lg:relative">
+            <div class="">
+                <div id="small-logo" class="lg:hidden ml-3.5 flex items-center ">
+                    <button id="menu_btn"><img src="./img/icon/menu-icon.png" class="w-6 mr-4"></button>
+                    <img src="./img/logo.png" alt="logo">
                 </div>
-                <div class="flex mt-3.5 mx-5">
-                    <p class="text-3xl font-bold">$8</p>
-                    <p class="mt-2.5">/m</p>
-                    <button class="bg-primary ml-5 rounded py-2.5 px-7">Upgrade</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end left side -->
-    <!-- main side-->
-    <div class="basis-full lg:basis-4/5 flex mt-4">
-        <div class="lg:mx-11 max-h-11">
-            <div id="header" class="flex">
-                <!-- search -->
-                <div id="search" class="w-full lg:w-2/3 flex items-center relative">
-                    <input type="text" placeholder="Search for news.."
-                           class="hidden lg:flex focus:outline-none focus:border-sky-700 focus:ring-sky-500 focus:ring-1 text-sm bg-sky-50 pl-3.5 w-full h-11 rounded">
-                    <div class="absolute top-3 right-0 lg:right-4 flex items-center">
-                        <button class="bottom-3"><img src="./img/icon/search-icon.png" class="w-5"></button>
+                <div id="menu" class="hidden lg:block">
+                    <div id="large" class="ml-8 flex items-center pt-5">
+                        <img src="./img/logo.png" alt="logo">
+                        <p class="ml-3.5 font-bold text-lg text-primary">Aster News</p>
+                    </div>
+                    <ul class=" lg:block mt-7 font-normal">
+                        <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer select-menu">
+                            <img src="./img/icon/home.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Top Stories</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
+                            <img src="./img/icon/global.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Around the World</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
+                            <img src="./img/icon/business.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Business</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
+                            <img src="./img/icon/health.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Health</p>
+                        </li>
+                        <hr class="mr-4">
+                        <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
+                            <img src="./img/icon/shield.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Covid 19</p>
+                        </li>
+                        <hr class="mr-4">
+                        <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
+                            <img src="./img/icon/video.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Entertainment</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
+                            <img src="./img/icon/award.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Sports</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
+                            <img src="./img/icon/message.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Discussion</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
+                            <img src="./img/icon/bell.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">Notification</p>
+                        </li>
+                        <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
+                            <img src="./img/icon/setting.png" class="w-5 ml-6">
+                            <p class="text-sm ml-8">News Feed Settings</p>
+                        </li>
+                    </ul>
+                    <div class="w-fit h-fit rounded bg-skyblue mt-8 pb-4 lg:mt-32 ml-2 xl:ml-5 lg:mr-5 text-white">
+                        <div class="flex items-center mx-2 xl:mx-5">
+                            <img src="./img/icon/gift.png" class="w-6 mt-5">
+                            <p class="mt-5 ml-4 text-xs xl:text-sm">Subscribe to Premium</p>
+                        </div>
+                        <div class="flex items-center mt-3.5 mx-2 xl:mx-5">
+                            <p class="text-3xl font-bold">$8</p>
+                            <p class="mt-2.5">/m</p>
+                            <button class="bg-primary ml-5 rounded text-xs xl:text-xl py-2.5 px-7">Upgrade</button>
+                        </div>
                     </div>
                 </div>
-                <!-- last new -->
-                <div class="hidden lg:flex w-1/3 w-full h-11 rounded ml-5 border border-gray-400 flex align-middle relative">
-                    <a href="#" class="text-sm mx-3.5 flex items-center">
-                        <p>Latest news on</p>
-                        <p class="ml-1 text-sky-400">Covid-19</p>
-                        <img src="./img/icon/next-icon.png" class="w-5 absolute right-4">
-                    </a>
-                </div>
             </div>
+        </div>
+        <!-- end left side menu -->
+        <!-- main side -->
+        <div class="col-span-4 mt-4 mr-4 sm:ml-4 lg:ml-0">
+            <div class="flex">
+                <div class="flex w-3/4 items-center">
+                    <!-- search -->
+                    <div class="w-full lg:w-2/3 flex items-center">
+                        <input type="text" placeholder="Search for news.."
+                            class="hidden lg:flex focus:outline-none focus:border-sky-700 focus:ring-sky-500 focus:ring-1 text-sm bg-sky-100 pl-3.5 w-full h-11 rounded">
+                        <div class="absolute right-4/10 flex items-center">
+                            <button class="bottom-3"><img src="./img/icon/search-icon.png" class="w-5"></button>
+                        </div>
+                    </div>
+                    <!-- last new -->
+                    <div
+                        class="hidden lg:flex w-1/3 w-full h-11 rounded ml-5 border border-gray-400 flex align-middle relative">
+                        <a href="#" class="text-sm mx-3.5 flex items-center">
+                            <p>Latest news on</p>
+                            <p class="ml-1 text-sky-400">Covid-19</p>
+                            <img src="./img/icon/next-icon.png" class="w-5 absolute right-4">
+                        </a>
+                    </div>
+                </div>
+                <!-- user -->
+                <div class="w-1/4 mr-4">
+                    <div class="h-full flex items-center float-right">
+                        <img src="./img/icon/person-icon.png" class="w-6">
+                        <p class="text-sm ml-4 lg:mr-9">My Profile</p>
+                        <img src="./img/icon/down-icon.png" class="hidden lg:block w-4">
+                    </div>
+                </div>
+                <!-- end user -->
+            </div>
+            <!-- top-items -->
             <div id="top-items">
                 <p class="font-bold text-xl mt-9">Top Stories for you</p>
                 <ul class="slick-carousel mt-5 flex justify-between items-center">
                     <li class="slide-content select-top-items h-fit w-fit py-1.5 px-4 rounded-3xl mr-2.5">All</li>
                     <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Android</li>
                     <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Cricket</li>
-                    <!--                    <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">iPhone</li>-->
-                    <!--                    <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Google</li>-->
-                    <!--                    <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Nano Technology</li>-->
-                    <!--                    <li class="sslide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Nano Technology</li>-->
-                    <!--                    <li class="slide-content h-fit w-fit py-1.5 px-4 rounded-3xl"><img src="./img/icon/more.png"></li>-->
+                    <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">iPhone</li>
+                    <!-- <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Google</li>
+                    <li class="slide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Nano Technology</li>
+                    <li class="sslide-content bg-white h-fit w-fit py-1.5 px-4 rounded-3xl">Nano Technology</li>
+                    <li class="slide-content h-fit w-fit py-1.5 px-4 rounded-3xl"><img src="./img/icon/more.png"></li> -->
                 </ul>
             </div>
+            <!-- end top-items -->
+            <!-- post -->
             <div id="post" class="mt-6">
                 <div id="post-1" class="w-full h-fit bg-white py-4 pr-7 pl-7 flex">
                     <div class="basis-full lg:basis-4/5">
@@ -162,18 +181,12 @@
                     <img src="./img/post/post1.png" class="hidden lg:block basis-1/5 w-44 h-32 min-h-fit hover:cursor-pointer">
                 </div>
             </div>
+            <!-- end post -->
         </div>
-        <!-- right side -->
-        <div class="basis-0 lg:basis-1/5 max-h-11">
-            <div class="h-full flex items-center float-right">
-                <img src="./img/icon/person-icon.png" class="w-6">
-                <p class="text-sm ml-4 lg:mr-9">My Profile</p>
-                <img src="./img/icon/down-icon.png" class="hidden lg:block w-4">
-            </div>
-        </div>
-        <!-- end right side -->
+        <!-- end main side -->
+
     </div>
-</div>
+
 </body>
 
 </html>
