@@ -24,7 +24,7 @@ $('.slick').slick({
         {
             breakpoint: 550,
             settings: {
-                slidesToShow: 4,
+                slidesToShow: 3,
                 slidesToScroll: 2
             }
         },
@@ -35,5 +35,38 @@ $('.slick').slick({
                 slidesToScroll: 2
             }
         }
+    ]
+});
+
+$('.follow').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 5,
+    slidesToScroll: 2,
+    nextArrow: false,
+    prevArrow: false,
+    responsive: [
+        {
+            breakpoint: 1160,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 2,
+            }
+        },
+        {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 550,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
     ]
 });
