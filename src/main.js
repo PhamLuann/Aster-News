@@ -3,6 +3,11 @@ const menu_btn = document.getElementById('menu_btn')
 const small_logo = document.getElementById('small-logo')
 const large_logo = document.getElementById('large')
 const layer = document.getElementById('layer')
+
+// comment
+const view_comment = document.getElementById('view-comment')
+const hide_comment = document.getElementById('hide-comment')
+const comment = document.getElementById('comment')
 document.addEventListener('click', (e) => {
     if (menu_btn.contains(e.target)) {
         menu.classList.toggle('hidden');
@@ -19,5 +24,15 @@ document.addEventListener('click', (e) => {
             large_logo.classList.add('pt-5')
             layer.classList.remove('layer')
         }
+    }
+    if(view_comment.contains(e.target)){
+        view_comment.classList.add('hidden')
+        comment.classList.remove('hidden')
+        comment.classList.add('animate-view')
+    }
+    if(hide_comment.contains(e.target)){
+        comment.classList.remove('animate-view')
+        comment.classList.add('hidden')
+        view_comment.classList.remove('hidden')
     }
 })

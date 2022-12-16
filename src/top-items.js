@@ -43,7 +43,7 @@ $('.follow').slick({
     infinite: false,
     speed: 300,
     slidesToShow: 5,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     nextArrow: false,
     prevArrow: false,
     responsive: [
