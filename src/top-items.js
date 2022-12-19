@@ -6,6 +6,7 @@ function myFunction(x) {
             infinite: false,
             speed: 300,
             slidesToShow: 1,
+            slidesToScroll: 3,
             centerMode: false,
             nextArrow: false,
             prevArrow: false,
