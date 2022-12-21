@@ -25,7 +25,7 @@
             }
 
             .unhidden {
-                @apply pr-7 mt-0 absolute bg-white pt-4;
+                @apply mt-0 absolute bg-white pt-4;
             }
 
             .layer {
@@ -40,7 +40,7 @@
     <!-- left side menu -->
     <div id="layer" class="lg:col-span-1 absolute lg:relative z-10">
         <div class="">
-            <div id="small-logo" class="lg:hidden ml-3.5 flex items-center ">
+            <div id="small-logo" class="lg:hidden ml-3.5 flex items-center">
                 <button id="menu_btn"><img src="./img/icon/menu-icon.png" class="w-6 mr-4"></button>
                 <img src="./img/logo.png" alt="logo">
             </div>
@@ -49,59 +49,61 @@
                     <img src="./img/logo.png" alt="logo">
                     <p class="ml-3.5 font-bold text-lg text-primary">Aster News</p>
                 </div>
-                <ul class="mt-7 font-normal">
+                <ul class="mt-7 font-normal mr-11 lg:mr-0">
                     <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer select-menu">
                         <img src="./img/icon/home.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Top Stories</p>
+                        <p class="text-sm ml-2 xl:ml-8">Top Stories</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
                         <img src="./img/icon/global.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Around the World</p>
+                        <p class="text-sm ml-2 xl:ml-8">Around the World</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5 pr-20 hover:cursor-pointer">
                         <img src="./img/icon/business.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Business</p>
+                        <p class="text-sm ml-2 xl:ml-8">Business</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
                         <img src="./img/icon/health.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Health</p>
+                        <p class="text-sm ml-2 xl:ml-8">Health</p>
                     </li>
                     <hr class="mr-4">
                     <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
                         <img src="./img/icon/shield.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Covid 19</p>
+                        <p class="text-sm ml-2 xl:ml-8">Covid 19</p>
                     </li>
                     <hr class="mr-4">
                     <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
                         <img src="./img/icon/video.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Entertainment</p>
+                        <p class="text-sm ml-2 xl:ml-8">Entertainment</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
                         <img src="./img/icon/award.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Sports</p>
+                        <p class="text-sm ml-2 xl:ml-8">Sports</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
                         <img src="./img/icon/message.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Discussion</p>
+                        <p class="text-sm ml-2 xl:ml-8">Discussion</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5  hover:cursor-pointer">
                         <img src="./img/icon/bell.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">Notification</p>
+                        <p class="text-sm ml-2 xl:ml-8">Notification</p>
                     </li>
                     <li class="flex items-center py-4 pl-3.5 hover:cursor-pointer">
                         <img src="./img/icon/setting.png" class="w-5 ml-6">
-                        <p class="text-sm ml-8">News Feed Settings</p>
+                        <p class="text-sm ml-2 xl:ml-8">News Feed Settings</p>
                     </li>
                 </ul>
-                <div class="w-fit h-fit rounded bg-skyblue mt-8 pb-4 lg:mt-32 ml-6 xl:ml-2 xl:ml-5 lg:mr-5 text-white">
-                    <div class="flex items-center mx-2 xl:mx-5">
-                        <img src="./img/icon/gift.png" class="w-6 mt-5">
-                        <p class="mt-5 ml-4 text-xs xl:text-sm">Subscribe to Premium</p>
-                    </div>
-                    <div class="flex items-center mt-3.5 mx-2 xl:mx-5">
-                        <p class="text-3xl font-bold">$8</p>
-                        <p class="mt-2.5">/m</p>
-                        <button class="bg-primary ml-5 rounded text-xs xl:text-xl py-2.5 px-7">Upgrade</button>
+                <div class="w-full h-full flex justify-center lg:justify-start lg:ml-7">
+                    <div class="w-fit h-fit rounded bg-skyblue mt-8 pb-4  text-white">
+                        <div class="flex items-center mx-2 xl:mx-5">
+                            <img src="./img/icon/gift.png" class="w-6 mt-5">
+                            <p class="mt-5 ml-2 text-xs xl:text-sm">Subscribe to Premium</p>
+                        </div>
+                        <div class="flex items-center mt-3.5 mx-2 xl:mx-5">
+                            <p class="text-3xl font-bold">$8</p>
+                            <p class="mt-2.5">/m</p>
+                            <button class="bg-primary ml-2 rounded xl:text-xl py-2.5 px-7 lg:px-3">Upgrade</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,23 +112,23 @@
     <!-- end left side menu -->
     <!-- main side -->
     <div class="col-span-4 mt-4 mr-4 ml-4 lg:ml-0">
-        <div class="flex">
+        <!-- header -->
+        <div class="flex h-[35px]">
             <div class="flex w-3/4 items-center">
                 <!-- search -->
                 <div class="w-full lg:w-2/3 flex items-center">
                     <input type="text" placeholder="Search for news.."
                            class="hidden lg:flex focus:outline-none focus:border-sky-700 focus:ring-sky-500 focus:ring-1 text-sm bg-sky-100 pl-3.5 w-full h-11 rounded">
-                    <div class="absolute right-4/10 flex items-center">
+                    <div class="absolute right-4/10 lg:right-[43%] xl:right-4/10 flex items-center">
                         <button class="bottom-3"><img src="./img/icon/search-icon.png" class="w-5"></button>
                     </div>
                 </div>
                 <!-- last new -->
-                <div
-                        class="hidden lg:flex w-1/3 w-full h-11 rounded ml-5 border border-gray-400 flex align-middle relative">
-                    <a href="#" class="text-sm mx-3.5 flex items-center">
+                <div class="hidden lg:flex w-1/3 w-full h-11 rounded ml-5 border border-gray-400 flex align-middle relative">
+                    <a href="#" class="lg:text-xs xl:text-sm mx-3.5 flex items-center">
                         <p>Latest news on</p>
                         <p class="ml-1 text-sky-400">Covid-19</p>
-                        <img src="./img/icon/next-icon.png" class="w-5 absolute right-4">
+                        <img src="./img/icon/next-icon.png" class="w-5 absolute right-2">
                     </a>
                 </div>
             </div>
@@ -140,6 +142,7 @@
             </div>
             <!-- end user -->
         </div>
+        <!--end header-->
         <!-- content -->
         <div class="lg:grid lg:grid-cols-4 lg:gap-11">
             <div class="col-span-3">
@@ -156,7 +159,7 @@
                             <li class="item bg-white h-fit w-fit py-1.5 px-4 rounded-3xl mr-2.5">Nano Technology</li>
                             <li class="item bg-white h-fit w-fit py-1.5 px-4 rounded-3xl mr-2.5">Mental Health</li>
                             <li class="item h-full w-fit py-1.5 px-4 rounded-3xl"><img src="./img/icon/more.png"
-                                                                                  class="w-4 mt-2"></li>
+                                                                                       class="w-4 mt-2"></li>
                         </ul>
                     </div>
                 </div>
@@ -167,17 +170,22 @@
                         <div class="basis-full lg:basis-4/5">
                             <a href="news-feed.html">
                                 <div id="content-sm" class="lg:hidden w-full">
-                                    <p class="font-medium text-lg flex hover:text-skyblue">Samsung Galaxy F22 launched in India</p>
-                                    <p class="mt-2.5 text-sm leading-6 opacity-60">Samsung Galaxy F22 has been launched in
+                                    <p class="font-medium text-lg flex hover:text-skyblue">Samsung Galaxy F22 launched
+                                        in India</p>
+                                    <p class="mt-2.5 text-sm leading-6 opacity-60">Samsung Galaxy F22 has been launched
+                                        in
                                         India. The new smartphone has been priced in the
                                         mid-range segment.</p>
                                 </div>
                                 <div id="content-lg" class="hidden lg:block hover:cursor-pointer">
-                                    <p class="font-medium text-lg flex hover:text-skyblue">Samsung Galaxy F22 launched in India: Price,
+                                    <p class="font-medium text-lg flex hover:text-skyblue">Samsung Galaxy F22 launched
+                                        in India: Price,
                                         features, other details</p>
-                                    <p class="mt-2.5 text-sm leading-6 opacity-60">Samsung Galaxy F22 has been launched in
+                                    <p class="mt-2.5 text-sm leading-6 opacity-60">Samsung Galaxy F22 has been launched
+                                        in
                                         India. The new smartphone has been priced in the
-                                        mid-range segment. The new smartphone is powered by a MediaTek chipset and features
+                                        mid-range segment. The new smartphone is powered by a MediaTek chipset and
+                                        features
                                         a high
                                         refresh rate AMOLED display.</p>
                                 </div>
@@ -550,7 +558,9 @@
                 </div>
                 <!-- end row 6 -->
                 <div class="flex justify-center">
-                    <button class="mt-11 rounded border border-slate-400 px-5 py-2.5 hover:border-sky-400 hover:text-sky-400">Show More</button>
+                    <button class="mt-11 rounded border border-slate-400 px-5 py-2.5 hover:border-sky-400 hover:text-sky-400">
+                        Show More
+                    </button>
                 </div>
             </div>
             <!-- right side -->
